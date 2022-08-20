@@ -1,4 +1,4 @@
-import Element from './CartWidget';
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
     return (
@@ -9,7 +9,7 @@ const NavBar = () => {
                     <li><a href="sass.html">Sass</a></li>
                     <li><a href="badges.html">Components</a></li>
                     <li><a href="collapsible.html">JavaScript</a></li>
-                    <li><Element /></li>
+                    <li><CartWidget /></li>
                 </ul>
             </div>
         </nav>

@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import 'materialize-css/dist/css/materialize.min.css';
-import ItemListContainer from '../src/container/itemListCaontainer'
+import ItemListContainer from './container/itemListContainer'
 
 function App() {
   return (
