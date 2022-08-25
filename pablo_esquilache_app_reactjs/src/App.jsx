@@ -2,9 +2,10 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import 'materialize-css/dist/css/materialize.min.css';
-import ItemListContainer from './container/itemListContainer'
+import ItemListContainer from './container/itemListContainer';
 
 function App() {
+
   return (
     <><header>
       <NavBar />
