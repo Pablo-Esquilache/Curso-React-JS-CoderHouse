@@ -14,12 +14,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: 400, border: '1px solid black' }}>
-            <div>
-                <h2>PRODUCTO</h2>
-                <p>Precio $100</p>
-                <p>Stock = {stock}</p>
-            </div>
+        <div>
             <div style={{ padding: 10 }}>
                 <button style={{ marginRight: 20 }} disabled={contador <= 1} onClick={restar}>-</button>
                 <span>{contador}</span>
