@@ -4,17 +4,12 @@ import Item from "./Item";
 
 const ItemList = () => {
     const [motos, setMotos] = useState([])
-
-    // const dataMotos = async () => {
-    //     const response = await fetch('./datos.json')
-    //     const data = await response.json();
-    //     setMotos(data.results);
-
     useEffect(() => {
-        fetch('https://api.mercadolibre.com/sites/MLA/search?q=MotosYamaha')
+        setTimeout(() => fetch('https://api.mercadolibre.com/sites/MLA/search?q=MotosYamaha')
             .then(resp => resp.json())
             .then(data => { setMotos(data.results); }
-            )
+            ), 2000);
+
 
     }, [])
 
