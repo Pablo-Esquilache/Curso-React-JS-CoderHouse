@@ -15,7 +15,7 @@ const ItemList = () => {
 
     return (
         <>
-            {motos.map((moto, index) => {
+            {motos.map((moto, index, price) => {
                 return (
                     <Item key={index} img={moto.thumbnail} title={moto.title} price={moto.price} />
                 )
