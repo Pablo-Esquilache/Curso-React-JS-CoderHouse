@@ -8,19 +8,24 @@ const ItemDetailContainer = () => {
     const ItemDetailPromise = async () => {
         const res = await fetch('https://api.mercadolibre.com/sites/MLA/search?q=MotosYamaha');
         const data = await res.json();
-        setMotos(data.results);
+        setMotos(data.results[10]);
     }
-    console.log(motos)
     useEffect(() => {
         ItemDetailPromise();
     }, []);
 
-    const motosFind = motos.find(moto => moto.id === 'MLA1119794917')
-    if (motosFind !== undefined) {
-        return (
-            <ItemDetail img={motosFind.thumbnail} title={motosFind.title} price={motosFind.price}/>
-        )
-    }
+    return (
+        <>
+            <ItemDetail img={motos.thumbnail} title={motos.title} price={motos.price} />
+        </>
+    )
+
+    // const motosFind = motos.find(moto => moto.index === 'MLA1119794917')
+    // if (motosFind !== undefined) {
+    //     return (
+    //         <ItemDetail img={motosFind.thumbnail} title={motosFind.title} price={motosFind.price}/>
+    //     )
+    // }
 }
 
 export default ItemDetailContainer;
