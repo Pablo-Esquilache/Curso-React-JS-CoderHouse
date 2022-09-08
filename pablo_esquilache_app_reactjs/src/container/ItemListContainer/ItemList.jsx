@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
 
-
 const ItemList = () => {
     const [motos, setMotos] = useState([])
+
+    const ItemListApi = async () => {
+        const res = await fetch('/BaseDatos/BaseDatos.json');
+        const data = await res.json();
+        setMotos(data.MotosVarias);
+    }
+
     useEffect(() => {
-        setTimeout(() => fetch('https://api.mercadolibre.com/sites/MLA/search?q=MotosYamaha')
-            .then(resp => resp.json())
-            .then(data => { setMotos(data.results); }
-            ), 2000);
-
-
+        ItemListApi()
     }, [])
 
     return (
         <>
-            {motos.map((moto, index) => {
-                return (
-                    <Item key={index} img={moto.thumbnail} title={moto.title} price={moto.price} />
-                )
-            })}
+            {motos.map((moto, index) => (
+                <Item key={index} img={moto.Imagen} marca={moto.Marca} modelo={moto.Modelo} price={moto.Precio} />
+            ))}
         </>
     )
 }
