@@ -9,18 +9,16 @@ function App() {
 
   return (
     <>
-      <header>
-        <BrowserRouter>
+      <BrowserRouter>
+        <header>
           <NavBar />
-          <Routes>
-            <Route path='/' element={<ItemListContainer msj="APP de presentacion de Pablo Esquilache" aling="center" color="red"/>}/>
-            <Route path='/category/id' element={ItemListContainer}/>
-            <Route path='/item/:id' element={ItemDetailContainer}/>
-          </Routes>
-        </BrowserRouter>
-      </header>
-      {/* <ItemListContainer msj="APP de presentacion de Pablo Esquilache" aling="center" color="red" />
-      <ItemDetailContainer /> */}
+        </header>
+        <Routes>
+          <Route path='/' element={<ItemListContainer msj="APP de presentacion de Pablo Esquilache" aling="center" color="red" />} />
+          <Route path='/category/:idMarca' element={<ItemListContainer />} />
+          <Route path='/item/:idDetalle' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

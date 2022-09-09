@@ -8,7 +8,7 @@ const ItemListContainer = (greeting) => {
                 <h1 style={{ textAlign: greeting.aling, color: greeting.color }}>{greeting.msj}</h1>
             </div>
             <div>
-                <ItemList/>
+                <ItemList />
             </div>
         </>
     )

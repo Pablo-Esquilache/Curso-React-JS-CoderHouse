@@ -1,7 +1,8 @@
 import ItemCount from "../../components/ItemCount/ItemCount"
+import { Link } from "react-router-dom"
 
 
-const Item = ({ img, price, modelo, marca }) => {
+const Item = ({ img, price, modelo, marca, id }) => {
     const onAdd = () => {
         console.log('Ud. ha añadido un producto al carrito')
     }
@@ -12,6 +13,7 @@ const Item = ({ img, price, modelo, marca }) => {
             <h6>{modelo}</h6>
             <h4>{price}</h4>
             <ItemCount stock={10} initial={1} onAdd={onAdd} />
+            <Link to={`/item/${id}`}>Mas Detalles</Link>
         </div>
     )
 }
