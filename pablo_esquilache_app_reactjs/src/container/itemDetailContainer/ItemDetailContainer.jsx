@@ -11,11 +11,13 @@ const ItemDetailContainer = () => {
     const ItemDetailPromise = async () => {
         const res = await fetch('/BaseDatos/BaseDatos.json');
         const data = await res.json();
-        if (idDetalle) { setMotos(data.MotosVarias.filter(moto => moto.id === parseInt(idDetalle))) }
-        else { setMotos(data.MotosVarias) }
+        { setMotos(data.MotosVarias.filter(moto => moto.id === parseInt(idDetalle))) }
     }
+
     useEffect(() => {
-        ItemDetailPromise();
+        setTimeout(() => {
+            ItemDetailPromise();
+        }, 2000);
     }, [idDetalle]);
 
     return (
