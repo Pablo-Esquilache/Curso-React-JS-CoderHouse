@@ -16,9 +16,9 @@ const Item = ({ img, price, modelo, marca, id }) => {
             <h6>{modelo}</h6>
             <h4>{price}</h4>
             {
-                (irAlCarrito) 
-                ? <Link to='/cart'><button>Terminar compra</button></Link> 
-                : <ItemCount stock={10} initial={1} onAdd={onAdd} />
+                (irAlCarrito)
+                    ? <Link to='/cart'><button>Terminar compra</button></Link>
+                    : <ItemCount stock={10} initial={1} onAdd={onAdd} />
             }
             <Link to={`/item/${id}`}>Mas Detalles</Link>
         </div>
