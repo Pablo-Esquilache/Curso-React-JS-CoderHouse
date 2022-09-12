@@ -13,7 +13,7 @@ const NavBar = () => {
                     <li><NavLink to='/category/KTM'>KTM</NavLink></li>
                     <li><a href="sass.html">Quienes Somos</a></li>
                     <li><a href="badges.html">Nuestros Productos</a></li>
-                    <li><CartWidget /> 0</li>
+                    <li><CartWidget/> 0</li>
                 </ul>
             </div>
         </nav>
