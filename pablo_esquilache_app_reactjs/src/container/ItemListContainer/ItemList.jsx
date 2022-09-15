@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 const ItemList = () => {
     const [motos, setMotos] = useState([])
-    const { idMarca } = useParams();
+    const {idMarca} = useParams();
 
     const ItemListApi = async () => {
         const res = await fetch('/BaseDatos/BaseDatos.json');

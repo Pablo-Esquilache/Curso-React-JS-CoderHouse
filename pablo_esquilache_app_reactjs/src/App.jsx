@@ -1,16 +1,18 @@
 import './App.css';
-import NavBar from './components/NavBar/NavBar';
 import 'materialize-css/dist/css/materialize.min.css';
-import ItemDetailContainer from './container/itemDetailContainer/ItemDetailContainer';
+import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './container/ItemListContainer/itemListContainer';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ItemDetailContainer from './container/itemDetailContainer/ItemDetailContainer';
 import CartContainer from './container/CartContainer/CartContainer';
+import CartProvider from './context/CartContext';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <CartProvider>
         <header>
           <NavBar />
         </header>
@@ -20,6 +22,7 @@ function App() {
           <Route path='/item/:idDetalle' element={<ItemDetailContainer/>} />
           <Route path='/cart' element={<CartContainer/>} />
         </Routes>
+        </CartProvider>
       </BrowserRouter>
     </>
   );
