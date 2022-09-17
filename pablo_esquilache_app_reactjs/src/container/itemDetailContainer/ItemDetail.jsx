@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 
-const ItemDetail = ({ img, marca, modelo, price, detalle }) => {
+//({ img, marca, modelo, price, detalle })
+const ItemDetail = ({info}) => {
   const [irAlCarrito, setIrAlCarrito] = useState(false);
 
   const { agregarProducto } = useCartContext();
 
-  const onAdd = (item, cantidad) => {
+  const onAdd = (contador) => {
     setIrAlCarrito(true);
-    agregarProducto(item, cantidad);
+    agregarProducto(info, contador);
   };
 
   return (
@@ -26,10 +27,10 @@ const ItemDetail = ({ img, marca, modelo, price, detalle }) => {
         }}
       >
         <h3>
-          {marca} {modelo}
+          {info.Marca} {info.Modelo}
         </h3>
-        <img src={img} alt="" style={{ width: "100%", height: "100%" }} />
-        <h4>{price}</h4>
+        <img src={info.Imagen} alt="" style={{ width: "100%", height: "100%" }} />
+        <h4>{info.Precio}</h4>
         {irAlCarrito ? (
           <Link to="/cart">
             <button>Terminar compra</button>
@@ -39,7 +40,7 @@ const ItemDetail = ({ img, marca, modelo, price, detalle }) => {
         )}
       </div>
       <div style={{ overflow: "auto", width: "50%" }}>
-        <h6>{detalle}</h6>
+        <h6>{info.Detalle}</h6>
       </div>
     </div>
   );

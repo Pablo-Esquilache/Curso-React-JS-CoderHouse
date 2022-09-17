@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const ItemDetailPromise = async () => {
         const res = await fetch('/BaseDatos/BaseDatos.json');
         const data = await res.json();
-        { setMotos(data.MotosVarias.filter(moto => moto.id === parseInt(idDetalle))) }
+        setMotos(data.MotosVarias.filter(moto => moto.id === parseInt(idDetalle)))
     }
 
     useEffect(() => {
@@ -23,7 +23,8 @@ const ItemDetailContainer = () => {
     return (
         <>
             {motos.map((moto, index) => (
-                <ItemDetail detalle={moto.Detalle} key={index} id={moto.id} img={moto.Imagen} marca={moto.Marca} modelo={moto.Modelo} price={moto.Precio} />
+                <ItemDetail key={index} info={moto} />
+                // <ItemDetail detalle={moto.Detalle} key={index} id={moto.id} img={moto.Imagen} marca={moto.Marca} modelo={moto.Modelo} price={moto.Precio} />
             ))}
         </>
     )

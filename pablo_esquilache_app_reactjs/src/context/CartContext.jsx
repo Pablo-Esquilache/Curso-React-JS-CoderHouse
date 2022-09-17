@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 const CartContext = React.createContext([]);
 export const useCartContext = () => useContext(CartContext);
 
-const CartProvider = ({Children}) => {
+const CartProvider = ({children}) => {
   const [carrito, setCarrito] = useState([]);
 
   const limpiarCarrito = () => setCarrito([]);
@@ -11,26 +11,26 @@ const CartProvider = ({Children}) => {
     carrito.find((producto) => producto.id === id) ? true : false;
 
   const eliminarProducto = (id) =>
-    setCarrito(carrito.filter((producto) => producto.id === !id));
+    setCarrito(carrito.filter((producto) => producto.id !== id));
 
-  const agregarProducto = (item, cantidad) => {
+  const agregarProducto = (info, contador) => {
     let newCarrito;
-    let producto = carrito.find((producto) => producto.id === item.id);
+    let producto = carrito.find((producto) => producto.id === info.ID);
     if (producto) {
-      producto.cantidad += cantidad;
+      producto.cantidad += contador;
       newCarrito = { ...carrito };
     } else {
-      producto = { ...item, cantidad: cantidad };
-      newCarrito = { ...item, producto };
+      producto = { ...info, cantidad: contador };
+      newCarrito = { ...info, producto };
     }
     setCarrito(newCarrito);
   };
 
   console.log(carrito);
-  
+
   return (
     <CartContext.Provider value={{limpiarCarrito, enCarrito, eliminarProducto, agregarProducto}}>
-      {Children}
+      {children}
     </CartContext.Provider>
   );
 };
