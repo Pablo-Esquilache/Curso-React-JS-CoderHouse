@@ -9,9 +9,9 @@ const ItemDetail = ({info}) => {
 
   const { agregarProducto } = useCartContext();
 
-  const onAdd = (contador) => {
+  const onAdd = (cantidad) => {
     setIrAlCarrito(true);
-    agregarProducto(info, contador);
+    agregarProducto(info, cantidad);
   };
 
   return (

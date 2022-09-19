@@ -24,7 +24,6 @@ const ItemDetailContainer = () => {
         <>
             {motos.map((moto, index) => (
                 <ItemDetail key={index} info={moto} />
-                // <ItemDetail detalle={moto.Detalle} key={index} id={moto.id} img={moto.Imagen} marca={moto.Marca} modelo={moto.Modelo} price={moto.Precio} />
             ))}
         </>
     )

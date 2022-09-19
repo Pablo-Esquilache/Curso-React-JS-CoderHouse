@@ -13,15 +13,15 @@ const CartProvider = ({children}) => {
   const eliminarProducto = (id) =>
     setCarrito(carrito.filter((producto) => producto.id !== id));
 
-  const agregarProducto = (info, contador) => {
+  const agregarProducto = (info, cantidad) => {
     let newCarrito;
-    let producto = carrito.find((producto) => producto.id === info.ID);
-    if (producto) {
-      producto.cantidad += contador;
-      newCarrito = { ...carrito };
+    let producto = carrito.find((producto) => producto.id === info.id);
+    if (producto) {      
+      producto.cantidad += cantidad;
+      newCarrito = [...carrito ];
     } else {
-      producto = { ...info, cantidad: contador };
-      newCarrito = { ...info, producto };
+      producto = { ...info, cantidad: cantidad };
+      newCarrito = [ ...carrito, producto ];
     }
     setCarrito(newCarrito);
   };
