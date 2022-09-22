@@ -1,0 +1,20 @@
+.itemDetail-container {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+}
+.itemDetail-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: "50%";
+}
+.itemDetail-card img {
+    width: 70%;
+}
+.itemDetail-detalle {
+    width: 50%;
+}
+.itemDetail-detalle p {
+    font-size: 16px;    
+}

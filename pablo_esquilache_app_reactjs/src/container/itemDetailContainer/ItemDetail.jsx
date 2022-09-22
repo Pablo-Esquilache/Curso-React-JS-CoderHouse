@@ -2,8 +2,8 @@ import ItemCount from "../../components/ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
+import './ItemDetail.css'
 
-//({ img, marca, modelo, price, detalle })
 const ItemDetail = ({info}) => {
   const [irAlCarrito, setIrAlCarrito] = useState(false);
 
@@ -15,22 +15,13 @@ const ItemDetail = ({info}) => {
   };
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "row", margin: 10, width: 600 }}
-    >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "50%",
-        }}
-      >
+    <div className="itemDetail-container">
+      <div className="itemDetail-card">
         <h3>
           {info.Marca} {info.Modelo}
         </h3>
-        <img src={info.Imagen} alt="" style={{ width: "100%", height: "100%" }} />
-        <h4>{info.Precio}</h4>
+        <img src={info.Imagen} alt=""/>
+        <h4>${info.Precio}</h4>
         {irAlCarrito ? (
           <Link to="/cart">
             <button>Terminar compra</button>
@@ -39,8 +30,8 @@ const ItemDetail = ({info}) => {
           <ItemCount stock={10} initial={1} onAdd={onAdd} />
         )}
       </div>
-      <div style={{ overflow: "auto", width: "50%" }}>
-        <h6>{info.Detalle}</h6>
+      <div className="itemDetail-detalle">
+        <p>{info.Detalle}</p>
       </div>
     </div>
   );

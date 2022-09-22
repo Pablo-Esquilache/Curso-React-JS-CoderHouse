@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
+import "./ItemCount.css"
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [cantidad, setCantidad] = useState(parseInt(initial));
@@ -17,10 +18,9 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   }, [initial]);
 
   return (
-    <div>
-      <div style={{ padding: 10 }}>
+    <div className="btn-itemCount">
+      <div className="btn-itemCount-1">
         <button
-          style={{ marginRight: 20 }}
           disabled={cantidad <= 1}
           onClick={restar}
         >
@@ -28,7 +28,6 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         </button>
         <span>{cantidad}</span>
         <button
-          style={{ marginLeft: 20 }}
           disabled={cantidad >= stock}
           onClick={sumar}
         >

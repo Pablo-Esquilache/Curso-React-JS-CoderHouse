@@ -5,7 +5,7 @@
             "Marca": "Yamaha",
             "Modelo": "XTZ 250",
             "Año": 2015,
-            "Precio": "$650.000",
+            "Precio": 650000,
             "Imagen": "/BaseDatos/ImagenesJson/Yamaha_XTZ_250.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         },
@@ -14,7 +14,7 @@
             "Marca": "Honda",
             "Modelo": "Tornado 250",
             "Año": 2014,
-            "Precio": "$600.000",
+            "Precio": 600000,
             "Imagen": "/BaseDatos/ImagenesJson/Honda-Tornado-250.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         },
@@ -23,7 +23,7 @@
             "Marca": "KTM",
             "Modelo": "DUKE 390",
             "Año": 2017,
-            "Precio": "$550.000",
+            "Precio": 550000,
             "Imagen": "/BaseDatos/ImagenesJson/KTM-Duke-390.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         },
@@ -32,7 +32,7 @@
             "Marca": "Honda",
             "Modelo": "Twister 250",
             "Año": 2013,
-            "Precio": "$650.000",
+            "Precio": 650000,
             "Imagen": "/BaseDatos/ImagenesJson/Honda-Twister-250.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         },
@@ -41,7 +41,7 @@
             "Marca": "Yamaha",
             "Modelo": "TTR 230",
             "Año": 2011,
-            "Precio": "$650.000",
+            "Precio": 650000,
             "Imagen": "/BaseDatos/ImagenesJson/Yamaha-TTR-230.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         },
@@ -50,8 +50,35 @@
             "Marca": "KTM",
             "Modelo": "EXC 250",
             "Año": 2011,
-            "Precio": "$650.000",
+            "Precio": 650000,
             "Imagen": "/BaseDatos/ImagenesJson/KTM-EXC-250.png",
+            "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
+        },
+        {
+            "id": 7,
+            "Marca": "Yamaha",
+            "Modelo": "FZ 16",
+            "Año": 2011,
+            "Precio": 350000,
+            "Imagen": "/BaseDatos/ImagenesJson/Yamaha-FZ16-160.png",
+            "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
+        },
+        {
+            "id": 8,
+            "Marca": "Honda",
+            "Modelo": "CB 500",
+            "Año": 2011,
+            "Precio": 800000,
+            "Imagen": "/BaseDatos/ImagenesJson/Honda-CB-500.png",
+            "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
+        },
+        {
+            "id": 9,
+            "Marca": "KTM",
+            "Modelo": "Super Duke 1290",
+            "Año": 2011,
+            "Precio": 1650000,
+            "Imagen": "/BaseDatos/ImagenesJson/KTM-SuperDuke-1290.png",
             "Detalle": "La Yamaha XTZ 250 es una motocicleta de doble deporte diseñada y producida por Yamaha Motor do Brasil, a partir de 2006. Es una variante de la XT250, que se comercializa en todo el mundo, y deriva del modelo XT500 de 1975, que estableció una exitosa gama de motocicletas de doble deporte, incluida la XT600 Ténéré, que contribuyó en gran medida a la imagen de Yamaha. Reemplaza al XT225 en el mercado brasileño."
         }
     ]

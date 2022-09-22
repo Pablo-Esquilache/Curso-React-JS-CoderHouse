@@ -1,13 +1,14 @@
 import ItemList from './ItemList';
+import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 
     return (
         <>
-            <div>
+            <div className='ItemList-Titulo'>
                 <h1>Motos P.D.E</h1>
             </div>
-            <div>
+            <div  className="itemList-container">
                 <ItemList />
             </div>
         </>
