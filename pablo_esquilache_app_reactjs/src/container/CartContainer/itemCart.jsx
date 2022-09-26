@@ -4,8 +4,8 @@ const ItemCart = ({ info }) => {
   const { eliminarProducto } = useCartContext();
 
   return (
-    <div style={{display: 'flex', flexDirection: 'row'}}>
-      <img style={{width:100}} src={info.Imagen} alt="" />
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <img style={{ width: 100 }} src={info.Imagen} alt="" />
       <p>{info.Marca}</p>
       <p>{info.Modelo}</p>
       <p>Precio Unitario: ${info.Precio}</p>

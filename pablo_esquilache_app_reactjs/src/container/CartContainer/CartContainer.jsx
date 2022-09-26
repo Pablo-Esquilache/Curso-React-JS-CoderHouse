@@ -11,7 +11,7 @@ const CartContainer = () => {
         <p>No hay elementos...</p>
         <Link to="/">Ir al home</Link>
       </>
-    ); 
+    );
   }
   return (
     <>

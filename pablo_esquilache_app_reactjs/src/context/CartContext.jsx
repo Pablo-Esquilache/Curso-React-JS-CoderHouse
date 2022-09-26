@@ -13,7 +13,10 @@ const CartProvider = ({ children }) => {
   };
 
   const totalProductos = () =>
-    carrito.reduce((acumulador, productoacutal) => acumulador + productoacutal.cantidad, 0);
+    carrito.reduce(
+      (acumulador, productoacutal) => acumulador + productoacutal.cantidad,
+      0
+    );
 
   const limpiarCarrito = () => setCarrito([]);
 
@@ -47,7 +50,7 @@ const CartProvider = ({ children }) => {
         agregarProducto,
         precioTotal,
         totalProductos,
-        carrito
+        carrito,
       }}
     >
       {children}
