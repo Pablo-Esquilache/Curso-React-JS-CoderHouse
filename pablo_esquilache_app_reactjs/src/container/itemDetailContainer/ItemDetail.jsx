@@ -2,9 +2,9 @@ import ItemCount from "../../components/ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
-import './ItemDetail.css'
+import "./ItemDetail.css";
 
-const ItemDetail = ({info}) => {
+const ItemDetail = ({ info }) => {
   const [irAlCarrito, setIrAlCarrito] = useState(false);
 
   const { agregarProducto } = useCartContext();
@@ -15,13 +15,13 @@ const ItemDetail = ({info}) => {
   };
 
   return (
-    <div className="itemDetail-container">
+    <div key={info.index} className="itemDetail-container">
       <div className="itemDetail-card">
         <h3>
-          {info.Marca} {info.Modelo}
+          {info.marca} {info.modelo}
         </h3>
-        <img src={info.Imagen} alt=""/>
-        <h4>${info.Precio}</h4>
+        <img src={info.imagen} alt="" />
+        <h4>${info.precio}</h4>
         {irAlCarrito ? (
           <Link to="/cart">
             <button>Terminar compra</button>
@@ -31,7 +31,7 @@ const ItemDetail = ({info}) => {
         )}
       </div>
       <div className="itemDetail-detalle">
-        <p>{info.Detalle}</p>
+        <p>{info.detalle}</p>
       </div>
     </div>
   );

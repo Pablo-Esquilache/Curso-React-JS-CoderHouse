@@ -1,30 +1,33 @@
 import { useEffect, useState } from "react";
 import Item from "./Item";
 import { useParams } from "react-router-dom";
+import {
+  getFirestore,
+  getDocs,
+  collection,
+  query,
+  where,
+} from "firebase/firestore";
 
 const ItemList = () => {
-    const [motos, setMotos] = useState([])
-    const {idMarca} = useParams();
+  const [motos, setMotos] = useState([]);
 
-    const ItemListApi = async () => {
-        const res = await fetch('/BaseDatos/BaseDatos.json');
-        const data = await res.json();
-        if (idMarca) { setMotos(data.MotosVarias.filter(moto => moto.Marca === idMarca)) }
-        else { setMotos(data.MotosVarias) }
+  const { idMarca } = useParams();
+
+  useEffect(() => {
+    const querybd = getFirestore();
+    const queryCollection = collection(querybd, 'productos');
+    if (idMarca) {
+      const queryMarca = query(queryCollection, where("marca", "==", idMarca))
+      getDocs(queryMarca)
+      .then(res => setMotos(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))
+    } else {
+        getDocs(queryCollection)
+        .then(res => setMotos(res.docs.map(productos => ({ id: productos.id, ...productos.data() }))))
     }
+  }, [idMarca]);
 
-    useEffect(() => {
-        ItemListApi()
-    }, [idMarca])
-
-    return (
-        <>
-            {motos.map((moto, index) => (
-                <Item key={index} id={moto.id} img={moto.Imagen} marca={moto.Marca} modelo={moto.Modelo} price={moto.Precio} />
-            ))}
-        </>
-    )
-}
-
+  return <Item info={motos} />;
+};
 
 export default ItemList;

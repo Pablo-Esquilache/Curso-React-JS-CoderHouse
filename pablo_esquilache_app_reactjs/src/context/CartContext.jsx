@@ -7,7 +7,7 @@ const CartProvider = ({ children }) => {
 
   const precioTotal = () => {
     return carrito.reduce(
-      (previo, actual) => previo + actual.cantidad * actual.Precio,
+      (previo, actual) => previo + actual.cantidad * actual.precio,
       0
     );
   };
@@ -38,9 +38,6 @@ const CartProvider = ({ children }) => {
     }
     setCarrito(newCarrito);
   };
-
-  console.log(carrito);
-
   return (
     <CartContext.Provider
       value={{

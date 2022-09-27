@@ -5,12 +5,12 @@ const ItemCart = ({ info }) => {
 
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-      <img style={{ width: 100 }} src={info.Imagen} alt="" />
-      <p>{info.Marca}</p>
-      <p>{info.Modelo}</p>
-      <p>Precio Unitario: ${info.Precio}</p>
+      <img style={{ width: 100 }} src={info.imagen} alt="" />
+      <p>{info.marca}</p>
+      <p>{info.modelo}</p>
+      <p>Precio Unitario: ${info.precio}</p>
       <p>{info.cantidad}</p>
-      <p>Subtotal: ${info.cantidad * info.Precio}</p>
+      <p>Subtotal: ${info.cantidad * info.precio}</p>
       <button onClick={() => eliminarProducto(info.id)}>eliminar</button>
     </div>
   );
