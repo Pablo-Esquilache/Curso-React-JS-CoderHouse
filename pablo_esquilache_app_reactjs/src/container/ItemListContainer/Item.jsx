@@ -6,10 +6,10 @@ const Item = ({ info }) => {
     <div key={info.index} className="item-container">
       <Link to={`/item/${info.id}`}>
         <div className="item-card">
-          <img src={info.img} alt="" />
+          <img src={info.imagen} alt="" />
           <h4>{info.marca}</h4>
           <h6>{info.modelo}</h6>
-          <h4>${info.price}</h4>
+          <h4>${info.precio}</h4>
         </div>
       </Link>
     </div>

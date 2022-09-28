@@ -6,13 +6,13 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 const ItemDetailContainer = () => {
   const [motos, setMotos] = useState([]);
 
-  const { idDetalle } = useParams();
+  const { iddetalle } = useParams();
 
   useEffect(() => {
     const querybd = getFirestore();
-    const queryDoc = doc(querybd, 'productos', idDetalle);
-    getDoc(queryDoc).then(res => setMotos({ id: res.id, ...res.data() }));
-  }, [idDetalle]);
+    const queryDoc = doc(querybd, "productos", iddetalle);
+    getDoc(queryDoc).then((res) => setMotos({ id: res.id, ...res.data() }));
+  }, [iddetalle]);
 
   return <ItemDetail info={motos} />;
 };
