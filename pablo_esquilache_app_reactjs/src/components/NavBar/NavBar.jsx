@@ -6,11 +6,11 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav className="navBar">
-      <div class="nav-wrapper">
+      <div className="nav-wrapper">
         <NavLink to="/">
           <img className="logo" src={Logo2} alt="" />
         </NavLink>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
             <NavLink to="/category/Yamaha">Yamaha</NavLink>
           </li>

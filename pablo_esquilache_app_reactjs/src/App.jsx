@@ -16,18 +16,9 @@ function App() {
             <NavBar />
           </header>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <ItemListContainer
-                  msj="APP de presentacion de Pablo Esquilache"
-                  aling="center"
-                  color="red"
-                />
-              }
-            />
-            <Route path="/category/:idmarca" element={<ItemListContainer />} />
-            <Route path="/item/:iddetalle" element={<ItemDetailContainer />} />
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/category/:idMarca" element={<ItemListContainer />} />
+            <Route path="/item/:idDetalle" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartContainer />} />
           </Routes>
         </CartProvider>

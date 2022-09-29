@@ -2,7 +2,7 @@ import Item from "./Item";
 
 const ItemList = ({ motos }) => {
   return motos.map((elem) => {
-    return <Item info={elem} />;
+    return <Item key={elem.id} info={elem} />;
   });
 };
 

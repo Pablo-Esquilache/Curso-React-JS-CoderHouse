@@ -13,13 +13,13 @@ import {
 const ItemListContainer = () => {
   const [motos, setMotos] = useState([]);
 
-  const { idmarca } = useParams();
+  const { idMarca } = useParams();
 
   useEffect(() => {
     const querybd = getFirestore();
     const queryCollection = collection(querybd, "productos");
-    if (idmarca) {
-      const queryMarca = query(queryCollection, where("marca", "==", idmarca));
+    if (idMarca) {
+      const queryMarca = query(queryCollection, where("marca", "==", idMarca));
       getDocs(queryMarca).then((res) =>
         setMotos(
           res.docs.map((productos) => ({
@@ -38,7 +38,7 @@ const ItemListContainer = () => {
         )
       );
     }
-  }, [idmarca]);
+  }, [idMarca]);
 
   return (
     <>
