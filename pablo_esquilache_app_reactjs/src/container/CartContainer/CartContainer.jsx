@@ -34,7 +34,7 @@ const CartContainer = () => {
   if (idCompra !== undefined) {
     return (
       <>
-        <p>Has comprado</p>
+        <p>Has realizado una comprado, y su numero de orden es {idCompra}</p>
         <Link to="/">Ir al home</Link>
       </>
     );
