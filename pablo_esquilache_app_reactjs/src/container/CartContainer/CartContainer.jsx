@@ -31,23 +31,32 @@ const CartContainer = () => {
     addDoc(ordersCollection, orden).then(({ id }) => setIdcompra(id));
   };
 
-  if (carrito.length === 0) {
+  if (idCompra !== undefined) {
     return (
       <>
-        <p>No hay elementos...</p>
+        <p>Has comprado</p>
         <Link to="/">Ir al home</Link>
       </>
     );
+  } else {
+    if (carrito.length === 0) {
+      return (
+        <>
+          <p>No hay elementos...</p>
+          <Link to="/">Ir al home</Link>
+        </>
+      );
+    }
+    return (
+      <>
+        {carrito.map((info) => (
+          <ItemCart key={info.id} info={info} />
+        ))}
+        <p>Precio Total: {precioTotal()}</p>
+        <button onClick={handleClick}>Finalizar compra</button>
+      </>
+    );
   }
-  return (
-    <>
-      {carrito.map((info) => (
-        <ItemCart key={info.id} info={info} />
-      ))}
-      <p>Precio Total: {precioTotal()}</p>
-      <button onClick={handleClick}>Finalizar compra</button>
-    </>
-  );
 };
 
 export default CartContainer;
