@@ -9,7 +9,7 @@ const ItemCart = ({ info }) => {
       <p>{info.marca}</p>
       <p>{info.modelo}</p>
       <p>Precio Unitario: ${info.precio}</p>
-      <p>{info.cantidad}</p>
+      <p>Unidades: {info.cantidad}</p>
       <p>Subtotal: ${info.cantidad * info.precio}</p>
       <button onClick={() => eliminarProducto(info.id)}>eliminar</button>
     </div>
