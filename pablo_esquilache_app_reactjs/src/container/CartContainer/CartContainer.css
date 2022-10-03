@@ -1,0 +1,13 @@
+.itemCartContainer {
+  padding: 15px;
+  width: 100%;
+}
+.itemCartContainer button a {
+  color: black;
+}
+.containerVacio {
+  text-align: center;
+}
+.containerLleno {
+  text-align: right;
+}

@@ -1,0 +1,22 @@
+.footerConteiner {
+    position: relative;
+    bottom: 0;
+    margin-top: 30px;
+    background-color: #90c3dd;
+}
+.footerDatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footerCopy {
+    text-align: center;
+}
+.hr2 {
+    width: 50%;
+    border: 0.5px solid black;
+}
+.hr1 {
+    width: 95%;
+    border: 0.5px solid black;
+}

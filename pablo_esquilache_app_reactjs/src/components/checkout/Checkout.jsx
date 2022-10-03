@@ -2,6 +2,7 @@ import { useState } from "react";
 import { addDoc, getFirestore, collection } from "firebase/firestore";
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
+import './checkout.css'
 
 const Checkout = () => {
   const { carrito, precioTotal } = useCartContext();
@@ -50,26 +51,30 @@ const Checkout = () => {
   };
 
   return (
-    <div>
+    <div className="checkoutContainer">
       {typeof idCompra !== "undefined" ? (
-        <div>
-          <p>Has realizado una compra, y su numero de orden es <b>{idCompra}</b></p>
-          <button><Link to="/">Ir al Home</Link></button>
+        <div className="checkoutMsj">
+          <p>
+            Has realizado una compra, y su numero de orden es <b>{idCompra}</b>
+          </p>
+          <button>
+            <Link to="/">Ir al Home</Link>
+          </button>
         </div>
       ) : (
         <form onSubmit={handleClick}>
           <div>
-            <label htmlFor="name">Nombre</label>
+            <label htmlFor="nombre">Nombre</label>
             <input
               type="text"
-              name="name"
-              id="name"
+              name="nombre"
+              id="nombre"
               onChange={changeHandler}
-              value={form.name}
+              value={form.nombre}
             />
           </div>
           <div>
-            <label htmlFor="emai">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"

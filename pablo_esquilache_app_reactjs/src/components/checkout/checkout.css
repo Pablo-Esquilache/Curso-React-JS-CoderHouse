@@ -1,0 +1,18 @@
+.checkoutContainer {
+    margin: 10px;
+    
+}
+.checkoutContainer form {
+    background-color: #00acc1;
+    padding: 10px;
+    border-radius: 5px;
+}
+.checkoutContainer form label {
+    color: black;
+}
+.checkoutMsj {
+    text-align: center;
+}
+.checkoutMsj button a {
+    color: black;
+}

@@ -1,20 +1,30 @@
-
+.item-container {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #00acc1;
+}
 .item-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
-  max-height: 100%;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
   color: black;
 }
-.item-card img {
-    max-width: 50%;
+.item-card-msj {
+  text-align: center;
+  width: 40%;
+  height: 100%;
 }
-.item-container {
-  width: 300px;
-  border: 1px solid black;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 5px;
-  background-color: #00acc1;
+.item-card-img {
+  width: 60%;
+  height: 100%;
+}
+.item-card-img img {
+  width: 150px;
 }

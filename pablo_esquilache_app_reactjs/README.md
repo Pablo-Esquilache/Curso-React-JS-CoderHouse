@@ -1,8 +1,14 @@
+# Presentacion de e-commerce del curso de reacr.js
+
+Este e-commerce fue creado durante la cursada de la carrera de desarrollador frontend, mas precisamente en el curso de react.js. 
+Es una landing page de un hipotetico lugar de venta de motos. La misma cuenta con una pagina principal donde se pueden ver todos los productos, clickeando sobre cualquiera de ellos se puede acceder al detalle de cada uno. Tambien cuanta con un carrito, y al finalizar la compra se debe llenar un formulario con los datos del comprador.
+Para este proyecto solo se uso un framework, materialize CSS, solo para el NavBar y el resto de los estilos fue dado con CSS puro. Tambien esta conectado a firebase, tanto la base de datos de los productos como las ordenes generada cada vez que se realiza una supuesta compra.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts    
 
 In the project directory, you can run:
 

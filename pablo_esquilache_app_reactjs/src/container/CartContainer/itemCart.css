@@ -1,0 +1,20 @@
+.itemCart {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px 150px 150px;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5px solid black;
+    width: 80%;
+    margin: auto;
+}
+.itemCart p {
+    text-align: center;
+}
+.itemCart button {
+    width: 35px;
+    padding: 5px;
+    margin: auto;
+}
+.itemCart img {
+    width: 100px
+}

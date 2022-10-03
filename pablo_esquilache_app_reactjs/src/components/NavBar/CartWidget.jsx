@@ -10,7 +10,7 @@ const CartWidget = () => {
     <>
       <Link to="/cart">
         <FontAwesomeIcon icon={faCartShopping} />
-        <span>{totalProductos() || ""}</span>
+        <span style={{padding:'5px'}}>{totalProductos() || ""}</span>
       </Link>
     </>
   );
