@@ -1,0 +1,19 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablo-Esquilache/Curso---React-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pablo-Esquilache/Curso---React-JS/issues"
+  },
+  "homepage": "https://github.com/Pablo-Esquilache/Curso---React-JS#readme",
+  "description": ""
+}
